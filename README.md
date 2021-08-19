@@ -2,6 +2,8 @@
 
 for うちの楽団
 
+https://ef81sp.github.io/tfb-body-temperature-recorder/
+
 ## これはなに
 
 - 入力した数値と入力した日付をローカルストレージに保存します。
