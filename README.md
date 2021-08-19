@@ -20,3 +20,5 @@ https://ef81sp.github.io/tfb-body-temperature-recorder/
 ## 備考
 
 - 一時的に必要になったものなので、そのうち消えます。
+- 参考
+  - [Todo アプリ JavaScript Primer #jsprimer](https://jsprimer.net/use-case/todoapp/)
