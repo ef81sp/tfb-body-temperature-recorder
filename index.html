@@ -6,19 +6,24 @@
 
     <title>自分のスマホにだけ保存する体温記録</title>
     <style>
-      html {
-        font-size: calc(16px + 3vmin);
+      h1 {
+        font-size: 5vw;
       }
       input {
-        width: 8rem;
-        height: 1.5rem;
-        font-size: 1.5rem;
+        font-size: 5vw;
+        width: 40vw;
       }
       button {
-        font-size: 1rem;
+        font-size: 4vw;
+      }
+      #body-temperature-list li {
+        font-size: 4vw;
+      }
+      p {
+        font-size: 3vw;
       }
       details {
-        font-size: 0.8rem;
+        font-size: 3vw;
       }
     </style>
   </head>
@@ -80,7 +85,7 @@
         />
         <button type="submit">保存</button>
       </form>
-      入力後ちょっとの間は消せます(訂正用)。
+      <p>入力後ちょっとの間は消せます(訂正用)。</p>
       <div id="body-temperature-list" />
     </div>
     <script type="module" src="index.js"></script>
