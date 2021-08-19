@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>自分のスマホにだけ保存する体温記録</title>
+    <style>
+      .input {
+        width: 6em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>自分のスマホにだけ保存する体温記録</h1>
+    <div>
+      入力した体温と、そのときの日時を自分のスマホに記録します(インターネットには上がりません)
+      <details>
+        <summary>詳細(わかる人向け)</summary>
+        <ul>
+          <li>
+            <a
+              href="https://developer.mozilla.org/ja/docs/Web/API/Window/localStorage"
+              >localStorage</a
+            >に保存します
+            <ul>
+              <li>なので、厳密にはブラウザに記録します</li>
+            </ul>
+          </li>
+          <li>
+            一切のライブラリを使用していないので、初回のページ読み込み以外に通信の発生する余地はありません
+          </li>
+          <li>ソースは ここ から見られます</li>
+        </ul>
+      </details>
+    </div>
+    <div>
+      <h2>入力</h2>
+      <form id="body-temperature">
+        <input
+          id="body-temperature-input"
+          class="input"
+          type="number"
+          placeholder="例) 36.5"
+          autocomplete="off"
+          max="43"
+          min="34"
+          step="0.1"
+        />
+        <button type="submit">保存</button>
+      </form>
+      入力後ちょっとの間は消せます(訂正用)。
+      <div id="body-temperature-list" />
+    </div>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
