@@ -7,7 +7,7 @@ export class App {
     const savedList = localStorage.getItem('bodyTemperatureList');
     const initializeList = savedList
       ? JSON.parse(savedList).map((item) => ({
-          ...item,
+          bodyTemperature: item.bodyTemperature,
           date: new Date(item.date),
         }))
       : [];
@@ -40,13 +40,15 @@ export class App {
                 }℃</li>`;
 
           const deleteButtonElement = itemElement.querySelector('.delete');
-          deleteButtonElement?.addEventListener('click', () => {
-            this.BodyTemperatureListModel.deleteBodyTemperature(item.date);
-            localStorage.setItem(
-              'bodyTemperatureList',
-              JSON.stringify(this.BodyTemperatureListModel.getItems())
-            );
-          });
+          if (deleteButtonElement) {
+            deleteButtonElement.addEventListener('click', () => {
+              this.BodyTemperatureListModel.deleteBodyTemperature(item.date);
+              localStorage.setItem(
+                'bodyTemperatureList',
+                JSON.stringify(this.BodyTemperatureListModel.getItems())
+              );
+            });
+          }
           bodyTemperatureListElement.appendChild(itemElement);
         });
       render(bodyTemperatureListElement, containerElement);
