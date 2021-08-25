@@ -14,6 +14,10 @@ export class App {
     this.BodyTemperatureListModel = new BodyTemperatureListModel(
       initializeList
     );
+    const submitButton = document.getElementById('submit-button');
+    if (submitButton) {
+      submitButton.disabled = false;
+    }
   }
   mount() {
     const formElement = document.querySelector('#body-temperature');
